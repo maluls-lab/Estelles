@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spotify Fake</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #000;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  padding-bottom: 90px;
+}
+
+.sidebar {
+  width: 230px;
+  background: #000;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1DB954;
+  margin-bottom: 30px;
+}
+
+.menu p {
+  padding: 12px 0;
+  color: #b3b3b3;
+  cursor: pointer;
+}
+
+.menu p:hover {
+  color: white;
+}
+
+.main {
+  flex: 1;
+  background: linear-gradient(#1f1f1f, #121212);
+  padding: 25px;
+  overflow-y: auto;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+h1 {
+  margin: 30px 0 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #181818;
+  padding: 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  background: #282828;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+.player {
+  height: 90px;
+  background: #181818;
+  border-top: 1px solid #282828;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+
+.music-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 190px;
+}
+
+.music-info img {
+  width: 55px;
+  height: 55px;
+  border-radius: 4px;
+}
+
+.music-info p {
+  color: #b3b3b3;
+  font-size: 13px;
+}
+
+.controls {
+  text-align: center;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.progress {
+  width: 300px;
+  height: 4px;
+  background: #535353;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.progress div {
+  width: 40%;
+  height: 100%;
+  background: #1DB954;
+  border-radius: 10px;
+}
+
+.volume {
+  color: #b3b3b3;
+  min-width: 90px;
+  text-align: right;
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main {
+    padding: 18px;
+  }
+
+  .topbar button {
+    padding: 8px 14px;
+  }
+
+  .player {
+    padding: 0 12px;
+    gap: 10px;
+  }
+
+  .music-info {
+    min-width: 130px;
+  }
+
+  .music-info img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .progress {
+    width: 140px;
+  }
+
+  .volume {
+    display: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <aside class="sidebar">
+    <div class="logo">Spotify</div>
+
+    <div class="menu">
+      <p>🏠 Início</p>
+      <p>🔍 Buscar</p>
+      <p>📚 Sua Biblioteca</p>
+      <br>
+      <p>➕ Criar playlist</p>
+      <p>💚 Músicas curtidas</p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div>
+        <button>←</button>
+        <button>→</button>
+      </div>
+
+      <button>Entrar</button>
+    </div>
+
+    <h1>Boa noite</h1>
+
+    <section class="cards">
+      <div class="card">
+        <img src="https://picsum.photos/300?random=1" alt="Capa da playlist">
+        <h3>Playlist Sombria</h3>
+        <p>Músicas para sua personagem</p>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/300?random=2" alt="Capa da playlist">
+        <h3>Rock Clássico</h3>
+        <p>Black Sabbath, Metallica e mais</p>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/300?random=3" alt="Capa da playlist">
+        <h3>Noite Misteriosa</h3>
+        <p>Trilhas intensas e dramáticas</p>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/300?random=4" alt="Capa da playlist">
+        <h3>Favoritas</h3>
+        <p>Suas músicas mais ouvidas</p>
+      </div>
+    </section>
+  </main>
+
+</div>
+
+<footer class="player">
+  <div class="music-info">
+    <img src="https://picsum.photos/100?random=5" alt="Capa da música">
+    <div>
+      <strong>Nome da Música</strong>
+      <p>Nome do Artista</p>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div>
+      <button>⏮</button>
+      <button>▶</button>
+      <button>⏭</button>
+    </div>
+
+    <div class="progress">
+      <div></div>
+    </div>
+  </div>
+
+  <div class="volume">
+    🔊 ████░
+  </div>
+</footer>
+
+</body>
+</html>
